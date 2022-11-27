@@ -1,9 +1,0 @@
-
-
-li#pantry-list{
-    display: flex;
-    justify-content:space-between ;
-}
-li#pantry-list #plus-button{
-    color:#80F57E;
-}
