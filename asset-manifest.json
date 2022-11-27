@@ -1,38 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5b7d5b6.css",
-    "main.js": "/static/js/main.7aeecc70.js",
-    "static/js/787.945e0a12.chunk.js": "/static/js/787.945e0a12.chunk.js",
-    "static/media/SmokyBaconCheddarBreakfastHash_9.webp": "/static/media/SmokyBaconCheddarBreakfastHash_9.ee6266d3a71f0752410b.webp",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/A Biscuit.jpg": "/static/media/A Biscuit.11a0d82cac055a9ec7fb.jpg",
-    "static/media/mealcalendar.png": "/static/media/mealcalendar.ea4d784723993bf7180c.png",
-    "static/media/potatosoup.jpg": "/static/media/potatosoup.437f779a8014733f09b0.jpg",
-    "static/media/grilled-corn-jpg-1527101903.jpg": "/static/media/grilled-corn-jpg-1527101903.4028a4596932459cbf1c.jpg",
-    "static/media/Oatmeal-Glazed Cake.jpeg": "/static/media/Oatmeal-Glazed Cake.ff7372ac7da7e3b27285.jpeg",
-    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/slow-cooker-beef-drip-sandwiches.jpg": "/static/media/slow-cooker-beef-drip-sandwiches.ba21b941c391c80a69b6.jpg",
-    "static/media/default.png": "/static/media/default.6d941af41cb7f85b85ce.png",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/buffalogrilledfcheese.webp": "/static/media/buffalogrilledfcheese.58116c1d4e195be004d9.webp",
-    "static/media/chickenFriedSteak.jpg": "/static/media/chickenFriedSteak.e60f64569e6a19377e74.jpg",
-    "static/media/kittylittercake.JPG": "/static/media/kittylittercake.0e562d378532e14ec799.JPG",
-    "static/media/blueberry.JPG": "/static/media/blueberry.47a485c0d9a9b5a9c6c0.JPG",
-    "static/media/pancakes.jpg": "/static/media/pancakes.c42a152340de7eda5985.jpg",
-    "static/media/bolognacake.JPG": "/static/media/bolognacake.db63963a2c49b3b02b9a.JPG",
-    "static/media/spegos.JPG": "/static/media/spegos.522a95db84df7a9566a0.JPG",
-    "static/media/breakfastapple.webp": "/static/media/breakfastapple.afc0e9f369195180d307.webp",
-    "static/media/poopooplatter.JPG": "/static/media/poopooplatter.badc58e9b54bb41711b0.JPG",
-    "static/media/icecubes.JPG": "/static/media/icecubes.91d973dcadb66d7fc22c.JPG",
+    "main.css": "/static/css/main.ec743ea0.css",
+    "main.js": "/static/js/main.23bed218.js",
     "index.html": "/index.html",
-    "main.d5b7d5b6.css.map": "/static/css/main.d5b7d5b6.css.map",
-    "main.7aeecc70.js.map": "/static/js/main.7aeecc70.js.map",
-    "787.945e0a12.chunk.js.map": "/static/js/787.945e0a12.chunk.js.map"
+    "main.ec743ea0.css.map": "/static/css/main.ec743ea0.css.map",
+    "main.23bed218.js.map": "/static/js/main.23bed218.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5b7d5b6.css",
-    "static/js/main.7aeecc70.js"
+    "static/css/main.ec743ea0.css",
+    "static/js/main.23bed218.js"
   ]
 }
