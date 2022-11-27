@@ -1,0 +1,112 @@
+
+#navigation_container {
+  /* background-color:#1F2746; */
+  color: #e5e8f2;
+  text-decoration: none;
+  background-image: url(../../images/blueberry.JPG);
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 15px;
+  height: 150px;
+  
+}
+button#nav_home.btn.btn-secondary > a,
+button#nav_planner.btn.btn-secondary > a,
+button#nav_recipes.btn.btn-secondary > a,
+button#nav_pantry.btn.btn-secondary > a,
+button#nav_shopping.btn.btn-secondary > a,
+button#nav_createrecipe.btn.btn-secondary > a {
+  text-decoration: none;
+  color: #171c32;
+  
+}
+
+button#nav_home.btn.btn-secondary,
+button#nav_planner.btn.btn-secondary,
+button#nav_recipes.btn.btn-secondary,
+button#nav_pantry.btn.btn-secondary,
+button#nav_shopping.btn.btn-secondary,
+button#nav_createrecipe.btn.btn-secondary {
+  width: 118px;
+  height: 38px;
+  color: #171c32;
+  margin-right: 10px;
+  /* box-shadow: 1px 6px 40px -3px rgba(0, 0, 0, 0.59) inset;
+  -webkit-box-shadow: 1px 6px 40px -3px rgba(0, 0, 0, 0.59) inset;
+  -moz-box-shadow: 1px 6px 40px -3px rgba(0, 0, 0, 0.59) inset; */
+  border-radius: 15px;
+  padding:0px;
+}
+#nav_planner {
+  background-color: #fff496;
+  color: #171c32;
+}
+#nav_planner:hover {
+  opacity: 0.6;
+}
+#nav_recipes {
+  background-color: #ffac60;
+}
+#nav_recipes:hover {
+  opacity: 0.6;
+}
+#nav_pantry {
+  background-color: #80f57e;
+}
+#nav_pantry:hover {
+  opacity: 0.7;
+}
+#nav_shopping {
+  background-color: #7cd7f3;
+}
+#nav_shopping:hover {
+  opacity: 0.6;
+}
+#nav_home {
+  background-color: #fd99f3;
+}
+#nav_home:hover {
+  opacity: 0.8;
+}
+#nav_createrecipe {
+  background-color: #a4a3ff;
+}
+
+#nav_createrecipe:hover {
+  opacity: 0.8;
+}
+#nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100%;
+  border-radius: 10px;
+
+ 
+}
+@media screen and (min-width: 900px) {
+ 
+  button#nav_home.btn.btn-secondary > a,
+button#nav_planner.btn.btn-secondary > a,
+button#nav_recipes.btn.btn-secondary > a,
+button#nav_pantry.btn.btn-secondary > a,
+button#nav_shopping.btn.btn-secondary > a,
+button#nav_createrecipe.btn.btn-secondary > a {
+  text-decoration: none;
+  color: #171c32;
+  font-size: 19px;
+}
+}
+@media screen and (max-width: 900px) {
+ 
+  button#nav_home.btn.btn-secondary > a,
+button#nav_planner.btn.btn-secondary > a,
+button#nav_recipes.btn.btn-secondary > a,
+button#nav_pantry.btn.btn-secondary > a,
+button#nav_shopping.btn.btn-secondary > a,
+button#nav_createrecipe.btn.btn-secondary > a {
+  text-decoration: none;
+  color: #171c32;
+  font-size: 2vw;
+}
+}

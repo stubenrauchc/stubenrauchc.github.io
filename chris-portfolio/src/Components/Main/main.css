@@ -1,0 +1,20 @@
+div#log-out-home-button-group {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+
+    
+div#log-out-home-button-group > button {
+    background-color:inherit;
+    color: #E5E8F2;
+    border-radius: 15px;
+    border-color: #171c32;
+    background-color: #171c32;
+    }
+    a:hover, #fa-sign-in:hover{
+            color:#80F57E;       
+    }
+    a{
+        color: #E5E8F2;
+    }
+ 
