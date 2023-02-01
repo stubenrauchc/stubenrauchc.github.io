@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import './App.css';
 import Project1 from './StitchMarked';
-//import Project2 from './Project2';
-//import Project3 from './Project3';
+// import Project2 from './Project2';
+// import Project3 from './Project3';
 
 const projects = [
   {
     name: 'StitchMarked',
     component: <Project1 />
-  }
+  },
   // {
   //   name: 'Project 2',
   //   component: <Project2 />
@@ -26,14 +27,14 @@ const Desktop = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div className="container">
       {projects.map((project, index) => (
-        <div key={index} style={styles.icon} onClick={() => handleClick(index)}>
+        <div key={index} style={iconStyles} onClick={() => handleClick(index)}>
           {project.name}
         </div>
       ))}
       {selectedProject !== null && (
-        <div style={styles.window}>
+        <div style={windowStyles}>
           {projects[selectedProject].component}
         </div>
       )}
@@ -41,32 +42,25 @@ const Desktop = () => {
   );
 };
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    backgroundColor: '#f0f0f0'
-  },
-  icon: {
-    width: 100,
-    height: 100,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 10,
-    backgroundColor: '#fff',
-    border: '1px solid #ccc',
-    cursor: 'pointer'
-  },
-  window: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: '#fff',
-    padding: 20
-  }
+const iconStyles = {
+  width: 100,
+  height: 100,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: 10,
+  backgroundColor: '#fff',
+  border: '1px solid #ccc',
+  cursor: 'pointer'
+};
+
+const windowStyles = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  backgroundColor: '#fff',
+  padding: 20
 };
 
 export default Desktop;
