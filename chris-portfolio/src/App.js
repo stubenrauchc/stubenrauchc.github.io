@@ -1,124 +1,72 @@
-import React, { useEffect, useState } from 'react';
-import styled from "styled-components";
-import { ProgressBar } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
+import Project1 from './StitchMarked';
+//import Project2 from './Project2';
+//import Project3 from './Project3';
 
-const theme = {
-  blue: {
-    default: "#3f51b5",
-    hover: "#283593"
+const projects = [
+  {
+    name: 'StitchMarked',
+    component: <Project1 />
   }
-};
+  // {
+  //   name: 'Project 2',
+  //   component: <Project2 />
+  // },
+  // {
+  //   name: 'Project 3',
+  //   component: <Project3 />
+  // }
+];
 
-let progressInterval = null;
+const Desktop = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
 
-// Styling a regular HTML input
-const StyledInput = styled.input`
-  display: block;
-  margin: 20px 0px;
-  border: 1px solid lightblue;
-`;
-// Creating a custom hook
-function useInput(defaultValue) {
-  const [value, setValue] = useState(defaultValue);
-  function onChange(e) {
-    setValue(e.target.value);
-  }
-  return {
-    value,
-    onChange,
+  const handleClick = (index) => {
+    setSelectedProject(index);
   };
-}
-function clickMe() {
-  alert("You clicked me!");
-}
 
-
-//button stuff below
-const Button = styled.button`
-  background-color: ${(props) => theme[props.theme].default};
-  color: white;
-  padding: 5px 15px;
-  border-radius: 5px;
-  outline: 0;
-  text-transform: uppercase;
-  margin: 10px 0px;
-  cursor: pointer;
-  box-shadow: 0px 2px 2px lightgray;
-  transition: ease background-color 250ms;
-  &:hover {
-    background-color: ${(props) => theme[props.theme].hover};
-  }
-  &:disabled {
-    cursor: default;
-    opacity: 0.7;
-  }
-`;
-Button.defaultProps = {
-  theme: "blue"
-};
-
-
-
-
-function App() {
- 
-  const inputRows = useInput();
-  const inputRowLength = useInput();
-  let rows = inputRows.value;
-  let rowLength = inputRowLength.value;
-  let stitchCount = inputRowLength.value * inputRows.value;
-
-  const [counter, setCounter] = useState(0);
-  const incrementCounter = () => setCounter(counter + 1);
-  const incrementCounter10 = () => setCounter(counter + 10);
-  const incrementCounter20 = () => setCounter(counter + 20);
-  const incrementCounter50 = () => setCounter(counter + 50);
-  const incrementCounter100 = () => setCounter(counter + 100);
-  const incrementCounter200 = () => setCounter(counter + 200);
-
-  const incrementCounterRow = () => setCounter(counter + (inputRowLength.value * 1));
-  const incrementCounterRow10 = () => setCounter(counter + (inputRowLength.value * 10));
-  const incrementCounterRow20 = () => setCounter(counter + (inputRowLength.value * 20));
-  const incrementCounterRow50 = () => setCounter(counter + (inputRowLength.value * 50));
-  const incrementCounterRow100 = () => setCounter(counter + (inputRowLength.value * 100));
-  const incrementCounterRow200 = () => setCounter(counter + (inputRowLength.value * 200));
-  let percentValue = counter / stitchCount;
-  let percentage = Math.round(percentValue * 100);
-  let currentRow = Math.ceil(counter/rowLength);
-  let currentStitch = counter - ((currentRow-1) * rowLength);
-
-  
   return (
-    <div className="m-5">
-      <h5 className="mb-3">Welcome to StitchMarked!</h5>
-      <p>Number of Rows:<StyledInput {...inputRows}
-        placeholder="Enter Number of Rows"/>
-        Number of Stitches Per Row:<StyledInput {...inputRowLength}
-        placeholder="Enter Number of Stitches Per Row"/></p>
-      <span>Final Stitch Count: {stitchCount} </span>
-      <p>Current Stitch Total: {counter}</p>
-      <p>Current Row: {currentRow}</p>
-      <p>Current Stitch in Current Row: {currentStitch}</p>
-      <div className="progressBar">
-       <ProgressBar now={percentage} label={`${percentage}% completed`} />
-    </div>
-      <p>Stitch buttons:</p>
-      <Button onClick={incrementCounter}>+1</Button>
-      <Button onClick={incrementCounter10}>+10</Button>
-      <Button onClick={incrementCounter20}>+20</Button>
-      <Button onClick={incrementCounter50}>+50</Button>
-      <Button onClick={incrementCounter100}>+100</Button>
-      <Button onClick={incrementCounter200}>+200</Button>
-      <p>Row buttons:</p>
-      <Button onClick={incrementCounterRow}>+1</Button>
-      <Button onClick={incrementCounterRow10}>+10</Button>
-      <Button onClick={incrementCounterRow20}>+20</Button>
-      <Button onClick={incrementCounterRow50}>+50</Button>
-      <Button onClick={incrementCounterRow100}>+100</Button>
-
+    <div style={styles.container}>
+      {projects.map((project, index) => (
+        <div key={index} style={styles.icon} onClick={() => handleClick(index)}>
+          {project.name}
+        </div>
+      ))}
+      {selectedProject !== null && (
+        <div style={styles.window}>
+          {projects[selectedProject].component}
+        </div>
+      )}
     </div>
   );
-}
+};
 
-export default App;
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: '#f0f0f0'
+  },
+  icon: {
+    width: 100,
+    height: 100,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10,
+    backgroundColor: '#fff',
+    border: '1px solid #ccc',
+    cursor: 'pointer'
+  },
+  window: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: '#fff',
+    padding: 20
+  }
+};
+
+export default Desktop;
