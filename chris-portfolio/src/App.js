@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Project1 from './StitchMarked';
+import Project2 from './StitchMarked2';
 // import Project2 from './Project2';
 // import Project3 from './Project3';
 
@@ -9,10 +10,10 @@ const projects = [
     name: 'StitchMarked',
     component: <Project1 />
   },
-  // {
-  //   name: 'Project 2',
-  //   component: <Project2 />
-  // },
+  {
+    name: 'StitchMarked2',
+    component: <Project2 />
+  },
   // {
   //   name: 'Project 3',
   //   component: <Project3 />
@@ -60,7 +61,10 @@ const windowStyles = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#fff',
-  padding: 20
+  padding: 20,
+  border: '2px solid blue',
+  borderTop: '12px solid blue'
 };
+
 
 export default Desktop;
