@@ -30,7 +30,7 @@ function App() {
   
   return (
     <div className="App">
-      <h2>Row Counter</h2>
+      <h2>StitchMarked 2.0!</h2>
       <StyledInput {...inputRows} placeholder="Rows" />
       <StyledInput {...inputRowLength} placeholder="Row Length" />
       <br />
