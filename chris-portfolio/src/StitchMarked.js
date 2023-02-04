@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './StitchMarked.css';
 import styled from "styled-components";
 import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -90,7 +91,8 @@ function App() {
 
   
   return (
-    <div className="m-5">
+    
+    <div className="selected-project" style={{ height: '75vh', overflowY: 'scroll' }}>
       <h5 className="mb-3">Welcome to StitchMarked!</h5>
       <p>Number of Rows:<StyledInput {...inputRows}
         placeholder="Enter Number of Rows"/>

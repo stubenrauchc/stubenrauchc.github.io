@@ -5,6 +5,7 @@ import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import './StitchMarked.css';
 
 ReactDOM.render(
   <React.StrictMode>

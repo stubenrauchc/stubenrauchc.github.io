@@ -54,11 +54,13 @@ const iconStyles = {
 
 const windowStyles = {
   position: 'absolute',
-  top: '50%',
+  top: '55%',
   left: '50%',
+  
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#fff',
-  padding: 20,
+  paddingBottom: 20,
+  paddingTop: 10,
   border: '2px solid blue',
   borderTop: '20px solid blue'
 };
