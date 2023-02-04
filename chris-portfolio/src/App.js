@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Project1 from './StitchMarked';
 import Project2 from './StitchMarked2';
-// import Project2 from './Project2';
-// import Project3 from './Project3';
 
 const projects = [
   {
@@ -14,10 +12,6 @@ const projects = [
     name: 'StitchMarked2',
     component: <Project2 />
   },
-  // {
-  //   name: 'Project 3',
-  //   component: <Project3 />
-  // }
 ];
 
 const Desktop = () => {
@@ -36,6 +30,9 @@ const Desktop = () => {
       ))}
       {selectedProject !== null && (
         <div style={windowStyles}>
+          <button style={closeButtonStyles} onClick={() => setSelectedProject(null)}>
+            X
+          </button>
           {projects[selectedProject].component}
         </div>
       )}
@@ -63,7 +60,25 @@ const windowStyles = {
   backgroundColor: '#fff',
   padding: 20,
   border: '2px solid blue',
-  borderTop: '12px solid blue'
+  borderTop: '20px solid blue'
+};
+
+const closeButtonStyles = {
+  position: 'absolute',
+  top: '-18px',
+  left: '-0px',
+  width: '18px',
+  height: '18px',
+  borderRadius: '0%',
+  backgroundColor: 'red',
+  color: '#e6e6e6',
+  textAlign: 'top',
+  fontSize: '12px',
+  cursor: 'pointer',
+  paddingTop: '-1px',
+  paddingLeft: '4px',
+  paddingBottom: '4px'
+  
 };
 
 
